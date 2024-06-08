@@ -1,0 +1,59 @@
+<div
+    class="w-1/2 flex flex-col ring-container gap-2 mx-auto "
+>
+    <div class="rounded ring1 ring"></div>
+    <img class="bowl" src="/bowl2.png" alt="bowl" />
+    <div class=" rounded ring2 ring"></div>
+</div>
+
+<style>
+    .bowl {
+        width: 320px;
+        z-index: 2;
+        position: absolute;
+        top: 10%;
+        left:10%;
+    }
+    .ring-container {
+        perspective: 1000px;
+        position: relative;
+    }
+    .ring {
+        width: 235px;
+        height: 235px;
+        border-radius: 50%;
+        border: 12px solid #141118; 
+        transform-style: preserve-3d;
+        position: absolute;
+        top:16%;
+        left:17%;
+        /* animation: rotateRing 5s infinite linear; */
+        transition: transform 0.1s ease-in-out;
+        z-index: 1;
+    }
+    .ring2{
+        z-index:3;
+    }
+    
+</style>
+
+<script>
+    document.addEventListener("mousemove", (event) => {
+        document.addEventListener("mousemove", (event) => {
+            const ring1 = document.querySelector(".ring1");
+            const ring2 = document.querySelector(".ring2");
+
+            const divideBy = 15; // adjust sensitivity if needed
+            const xAxis = (window.innerWidth / 2 - event.pageX) / divideBy;
+            const yAxis = (window.innerHeight / 2 - event.pageY) / divideBy;
+
+            if (ring1 instanceof HTMLElement) {
+                ring1.style.transform = `rotateX(${60 + yAxis}deg) rotateZ(${xAxis}deg)`;
+            }
+
+            if (ring2 instanceof HTMLElement) {
+                ring2.style.transform = `rotateX(${60 - yAxis}deg) rotateZ(${-xAxis}deg)`;
+            }
+        });
+    });
+</script>

@@ -1,5 +1,5 @@
 <div
-    class="w-1/2 flex flex-col ring-container gap-2 mx-auto "
+    class="w-1/2 flex flex-col items-center ring-container gap-2 mx-auto "
 >
     <div class="rounded ring1 ring"></div>
     <img class="bowl" src="/bowl2.png" alt="bowl" />
@@ -12,7 +12,8 @@
         z-index: 2;
         position: absolute;
         top: 10%;
-        left:10%;
+        margin-left: auto;
+        margin-right: auto;
     }
     .ring-container {
         perspective: 1000px;
@@ -26,7 +27,8 @@
         transform-style: preserve-3d;
         position: absolute;
         top:16%;
-        left:17%;
+        margin-left: auto;
+        margin-right: auto;
         /* animation: rotateRing 5s infinite linear; */
         transition: transform 0.1s ease-in-out;
         z-index: 1;

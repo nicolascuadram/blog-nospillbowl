@@ -5,10 +5,10 @@
         <ul class="flex gap-2 flex-wrap justify-center">
             <li><span class="font-semibold">Nicolás López</span><span class="text-slate-600"> Presidente de Directorio</span></li>
             <li><span class="font-semibold">Nicolás Cuadra</span><span class="text-slate-600"> Gerente General</span></li>
+            <li><span class="font-semibold">Fernando Urzúa</span><span class="text-slate-600"> Gerente de E-commerce</span></li>
             <li><span class="font-semibold">Cristian Fuentes</span><span class="text-slate-600"> Gerente General de Asuntos Corporativos</span></li>
             <li><span class="font-semibold">Javier Gamboa</span><span class="text-slate-600"> Gerente General de Finanzas Corporativas</span></li>
             <li><span class="font-semibold">Rafael González</span><span class="text-slate-600"> Gerente General de Banco Ripley Chile</span></li>
-            <li><span class="font-semibold">Fernando Urzúa</span><span class="text-slate-600"> Gerente de E-commerce</span></li>
         </ul>
     </section>
     <section class="flex flex-col items-center gap-6">
@@ -28,15 +28,31 @@
     </section>
     <section class="flex flex-col items-center gap-6">
         <h1 class="text-xl font-bold text-center">Nuestros Valores</h1>
-        <ul class="flex gap-2 flex-wrap justify-center">
-            <li><span class="font-semibold">Innovación</span></li>
-            <li><span class="font-semibold">Responsabilidad Social</span></li>
-            <li><span class="font-semibold">Solidaridad</span></li>
+        <ul class="flex gap-2 flex-wrap justify-center uu">
+            <li>
+                <img class="w-20 bg-yellow-400 rounded-full p-4 shadow-md shadow-yellow-600" src="/innovacion.svg" alt="innovacion">
+                <span class="font-semibold">Innovación</span>
+            </li>
+            <li>
+                <img class="w-20 bg-cyan-400 rounded-full p-4 shadow-md shadow-cyan-600" src="/respo.svg" alt="innovacion">
+                <span class="font-semibold">Responsabilidad Social</span>
+            </li>
+            <li>
+                <img class="w-20 bg-emerald-400 rounded-full p-4 shadow-md shadow-emerald-600" src="/solidaridad.svg" alt="innovacion">
+                <span class="font-semibold">Solidaridad</span>
+            </li>
         </ul>
     </section>
 </div>
 
 <style>
+    .uu li{
+        transition: all .5s ease;
+    }
+    .uu li:hover{
+        box-shadow: rgba(243, 95, 22, 0.199) -4px 4px, rgba(243, 95, 22, 0.19) -8px 8px;
+    }
+
     li{
         border:1px solid black;
         padding: .5rem 1rem;
@@ -44,9 +60,10 @@
         flex-direction: column;
         justify-content: center;
         justify-items: center;
+        align-items: center;
         text-align: center;
         width: 300px;
-        gap: .3rem;
+        gap: .8rem;
         border-radius: 0.25rem;
     }
 </style>

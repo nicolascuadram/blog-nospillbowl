@@ -1,44 +1,46 @@
 <div class="flex flex-col gap-8 mx-20" id="about">
-    <h2 class="text-2xl font-bold text-center">Nosotros</h2>
-    <section class="flex flex-col items-center gap-6">
+    <h2 class="text-3xl font-bold text-center">Nosotros</h2>
+    <section class="flex flex-col items-center gap-6 border rounded-lg border-slate-300 px-6 pt-10 pb-12 bg-slate-50 shadow-md">
         <h1 class="text-xl font-bold text-center">Nuestra Estructura Organizacional</h1>
         <ul class="flex gap-2 flex-wrap justify-center">
-            <li><span class="font-semibold">Nicolás López</span><span class="text-slate-600"> Presidente de Directorio</span></li>
-            <li><span class="font-semibold">Nicolás Cuadra</span><span class="text-slate-600"> Gerente General</span></li>
-            <li><span class="font-semibold">Fernando Urzúa</span><span class="text-slate-600"> Gerente de E-commerce</span></li>
-            <li><span class="font-semibold">Cristian Fuentes</span><span class="text-slate-600"> Gerente General de Asuntos Corporativos</span></li>
-            <li><span class="font-semibold">Javier Gamboa</span><span class="text-slate-600"> Gerente General de Finanzas Corporativas</span></li>
-            <li><span class="font-semibold">Rafael González</span><span class="text-slate-600"> Gerente General de Banco Ripley Chile</span></li>
+            <li class="cargos"><span class="font-semibold">Nicolás López</span><span class="text-slate-600"> Presidente de Directorio</span></li>
+            <li class="cargos"><span class="font-semibold">Nicolás Cuadra</span><span class="text-slate-600"> Gerente General</span></li>
+            <li class="cargos"><span class="font-semibold">Fernando Urzúa</span><span class="text-slate-600"> Gerente de E-commerce</span></li>
+            <li class="cargos"><span class="font-semibold">Cristian Fuentes</span><span class="text-slate-600"> Gerente General de Asuntos Corporativos</span></li>
+            <li class="cargos"><span class="font-semibold">Javier Gamboa</span><span class="text-slate-600"> Gerente General de Finanzas Corporativas</span></li>
+            <li class="cargos"><span class="font-semibold">Rafael González</span><span class="text-slate-600"> Gerente General de Banco Ripley Chile</span></li>
         </ul>
     </section>
-    <section class="flex flex-col items-center gap-6">
-        <h1 class="text-xl font-bold text-center">Nuestra Visión</h1>
-        <p class="text-slate-600">
-            Ser un ecosistema relevante en los países donde operamos a través de un modelo de negocio sostenible
-            que genere la preferencia de nuestros clientes, impulse a nuestros socios estratégicos, facilite el
-            desarrollo de nuestros colaboradores y maximice el retorno del capital invertido, manteniendo nuestro
-            compromiso de responsabilidad con la sociedad.
-        </p>
-    </section>
-    <section class="flex flex-col items-center gap-6">
-        <h1 class="text-xl font-bold text-center">Nuestra Misión</h1>
-        <p class="text-slate-600">
-            Trabajamos para cumplir con los sueños de las personas y mejorar su calidad de vida a través de nuestros productos y servicios.
-        </p>
-    </section>
-    <section class="flex flex-col items-center gap-6">
+    <div class="flex gap-5">
+        <section class="flex flex-col items-center justify-start gap-6 border rounded-lg border-slate-300 px-6 py-10 bg-slate-50 shadow-md">
+            <h1 class="text-xl font-bold text-center">Nuestra Visión</h1>
+            <p class="text-slate-600">
+                Ser un ecosistema relevante en los países donde operamos a través de un modelo de negocio sostenible
+                que genere la preferencia de nuestros clientes, impulse a nuestros socios estratégicos, facilite el
+                desarrollo de nuestros colaboradores y maximice el retorno del capital invertido, manteniendo nuestro
+                compromiso de responsabilidad con la sociedad.
+            </p>
+        </section>
+        <section class="flex flex-col items-center justify-start gap-6 border rounded-lg border-slate-300 px-6 py-10 bg-slate-50 shadow-md">
+            <h1 class="text-xl font-bold text-center">Nuestra Misión</h1>
+            <p class="text-slate-600">
+                Trabajamos para cumplir con los sueños de las personas y mejorar su calidad de vida a través de nuestros productos y servicios.
+            </p>
+        </section>
+    </div>
+    <section class="flex flex-col items-center gap-6 border rounded-lg border-slate-300 px-6 pt-10 pb-12 bg-slate-50 shadow-md">
         <h1 class="text-xl font-bold text-center">Nuestros Valores</h1>
-        <ul class="flex gap-2 flex-wrap justify-center uu">
-            <li>
-                <img class="w-20 bg-yellow-400 rounded-full p-4 shadow-md shadow-yellow-600" src="/innovacion.svg" alt="innovacion">
+        <ul class="flex gap-4 flex-wrap justify-center uu">
+            <li class="innovacion">
+                <img class="w-20 bg-yellow-400 rounded-full p-4 shadow-md shadow-yellow-600" src="/innovacion.svg" alt="innovacion" loading="lazy">
                 <span class="font-semibold">Innovación</span>
             </li>
-            <li>
-                <img class="w-20 bg-cyan-400 rounded-full p-4 shadow-md shadow-cyan-600" src="/respo.svg" alt="innovacion">
+            <li class="responsabilidad">
+                <img class="w-20 bg-cyan-400 rounded-full p-4 shadow-md shadow-cyan-600" src="/respo.svg" alt="innovacion" loading="lazy">
                 <span class="font-semibold">Responsabilidad Social</span>
             </li>
-            <li>
-                <img class="w-20 bg-emerald-400 rounded-full p-4 shadow-md shadow-emerald-600" src="/solidaridad.svg" alt="innovacion">
+            <li class="solidaridad">
+                <img class="w-20 bg-emerald-400 rounded-full p-4 shadow-md shadow-emerald-600" src="/solidaridad.svg" alt="innovacion" loading="lazy">
                 <span class="font-semibold">Solidaridad</span>
             </li>
         </ul>
@@ -49,12 +51,17 @@
     .uu li{
         transition: all .5s ease;
     }
-    .uu li:hover{
-        box-shadow: rgba(243, 95, 22, 0.199) -4px 4px, rgba(243, 95, 22, 0.19) -8px 8px;
+    .uu .innovacion:hover{
+        box-shadow: rgba(250, 204, 21, 0.2) 0 4px, rgba(250, 204, 21, 0.3) 0 8px;
+    }
+    .uu .responsabilidad:hover{
+        box-shadow: rgba(34, 211, 238, 0.2) 0 4px, rgba(34, 211, 238, 0.3) 0 8px;
+    }
+    .uu .solidaridad:hover{
+        box-shadow: rgba(52, 211, 153, 0.2) 0 4px, rgba(52, 211, 153, 0.3) 0 8px;
     }
 
     li{
-        border:1px solid black;
         padding: .5rem 1rem;
         display: flex;
         flex-direction: column;
@@ -62,8 +69,22 @@
         justify-items: center;
         align-items: center;
         text-align: center;
-        width: 300px;
+        width: 280px;
         gap: .8rem;
         border-radius: 0.25rem;
+    }
+    .cargos{
+        background-color: #fafafa;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        transition: all .5s ease;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    }
+    .cargos:hover{
+        background-image: linear-gradient(to top right, var(--tw-gradient-stops));
+        --tw-gradient-from: #fafafa var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(248 250 252 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+        --tw-gradient-to: #f1f5f9 var(--tw-gradient-to-position);
     }
 </style>

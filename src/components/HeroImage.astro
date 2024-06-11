@@ -32,6 +32,7 @@
         /* animation: rotateRing 5s infinite linear; */
         transition: transform 0.1s ease-in-out;
         z-index: 1;
+        box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring), var(--tw-shadow, 0 0 #000);
     }
     .ring2{
         z-index:3;
@@ -45,7 +46,7 @@
             const ring1 = document.querySelector(".ring1");
             const ring2 = document.querySelector(".ring2");
 
-            const divideBy = 15; // adjust sensitivity if needed
+            const divideBy = 12; // adjust sensitivity if needed
             const xAxis = (window.innerWidth / 2 - event.pageX) / divideBy;
             const yAxis = (window.innerHeight / 2 - event.pageY) / divideBy;
 

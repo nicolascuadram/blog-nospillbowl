@@ -1,4 +1,4 @@
-<div class="flex flex-col gap-8 mx-20" id="about">
+<div class="flex flex-col gap-8 mx-20 mb-20" id="about">
     <h2 class="text-3xl font-bold text-center">Nosotros</h2>
     <section class="flex flex-col items-center gap-6 border rounded-lg border-slate-300 px-6 pt-10 pb-12 bg-slate-50 shadow-md">
         <h1 class="text-xl font-bold text-center">Nuestra Estructura Organizacional</h1>
@@ -11,7 +11,7 @@
             <li class="cargos"><span class="font-semibold">Rafael González</span><span class="text-slate-600"> Gerente General de Banco Ripley Chile</span></li>
         </ul>
     </section>
-    <div class="flex gap-5">
+    <div class="flex flex-col md:flex-row gap-5">
         <section class="flex flex-col items-center justify-start gap-6 border rounded-lg border-slate-300 px-6 py-10 bg-slate-50 shadow-md">
             <h1 class="text-xl font-bold text-center">Nuestra Visión</h1>
             <p class="text-slate-600">
@@ -41,7 +41,7 @@
             </li>
             <li class="solidaridad">
                 <img class="w-20 bg-emerald-400 rounded-full p-4 shadow-md shadow-emerald-600" src="/solidaridad.svg" alt="innovacion" loading="lazy">
-                <span class="font-semibold">Solidaridad</span>
+                <span class="font-semibold bg-gradient-to-tr from-slate-200 via-slate-900 to-slate-200">Solidaridad</span>
             </li>
         </ul>
     </section>
@@ -82,9 +82,11 @@
     }
     .cargos:hover{
         background-image: linear-gradient(to top right, var(--tw-gradient-stops));
-        --tw-gradient-from: #fafafa var(--tw-gradient-from-position);
-        --tw-gradient-to: rgb(248 250 252 / 0) var(--tw-gradient-to-position);
+        --tw-gradient-from: #e2e8f0 var(--tw-gradient-from-position);
+        --tw-gradient-to: rgb(226 232 240 / 0) var(--tw-gradient-to-position);
         --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-        --tw-gradient-to: #f1f5f9 var(--tw-gradient-to-position);
+        --tw-gradient-to: rgb(15 23 42 / 0)  var(--tw-gradient-to-position);
+        --tw-gradient-stops: var(--tw-gradient-from), white var(--tw-gradient-via-position), var(--tw-gradient-to);
+        --tw-gradient-to: #e2e8f0 var(--tw-gradient-to-position);
     }
 </style>

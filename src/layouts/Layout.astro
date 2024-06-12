@@ -22,7 +22,7 @@ const { title } = Astro.props;
 	</head>
 	<body class="w-full min-h-screen flex flex-col bg-white overflow-x-hidden">
 		<Navbar />
-		<main class="flex flex-col mx-20">
+		<main class="flex flex-col mx-[5%]">
 			<slot />
 		</main>
 		<Footer />
@@ -33,6 +33,7 @@ const { title } = Astro.props;
 
 	html {
 		font-family: 'Inter Variable', sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	.trans {

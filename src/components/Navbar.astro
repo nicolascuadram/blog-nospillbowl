@@ -1,22 +1,52 @@
-<nav class="flex justify-between items-center px-20 sticky top-0 bg-white z-50 py-4 border-b border-slate-300 shadow-md">
-    <div class="flex justify-start items-center w-1/4">
+<script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const dropdown = document.getElementById('dropdown');
+
+    document.addEventListener('DOMContentLoaded', function () {
+        
+        menuToggle.addEventListener('click', function () {
+            dropdown.classList.toggle('hidden');
+            dropdown.classList.toggle('flex');
+        });
+
+        document.addEventListener('click', function (event) {
+            const target = event.target;
+            const isClickInsideDropdown = dropdown.contains(target as Node);
+            const isClickOnMenuToggle = menuToggle.contains(target as Node);
+            
+            if (!isClickInsideDropdown && !isClickOnMenuToggle) {
+                dropdown.classList.add('hidden');
+                dropdown.classList.remove('flex');
+            }
+        });
+
+    });
+</script>
+
+<nav class="flex justify-between items-center px-[5%] md:px-20 sticky top-0 bg-white z-50 py-4 border-b border-slate-300 shadow-md">
+    <div class="flex justify-start items-center w-1/2 md:w-1/4">
         <a href="/" class="font-semibold text-xl text-black hover:text-black">
             <strong>NoSpill</strong>Bowl
         </a>
     </div>
-    <ul class="flex justify-end items-center gap-6 font-medium w-1/2 text-black">
+    <div class="flex items-center md:hidden">
+        <button id="menu-toggle" class="focus:outline-none">
+            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="icon icon-tabler icons-tabler-outline icon-tabler-menu-2" viewBox="0 0 24 24">
+                <path stroke="none" d="M0 0h24v24H0z"/>
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
+    </div>
+    <ul class="hidden md:flex justify-end items-center gap-6 font-medium w-1/2 text-black">
         <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#start">Inicio</a></li>
         <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#design">Diseño</a></li>
         <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#about">Nosotros</a></li>
         <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#strategy">Estrategias</a></li>
-        <!-- <li><a class="hover:bg-gray-200 py-2 px-4 rounded-md" href="/contact">Contacto</a></li> -->
     </ul>
-    <!-- <div class="flex justify-end items-center gap-2 w-1/4">
-        <button class="text-black hover:bg-gray-200 font-semibold py-2 px-4 rounded trans">
-            <a href="/login">Iniciar Sesión</a>
-        </button>
-        <button class="bg-black hover:bg-gray-900 text-white font-semibold py-2 px-4 rounded trans">
-            <a href="/register">Registrarse</a>
-        </button>
-    </div> -->
+    <ul id="dropdown" class="absolute hidden md:hidden flex-col justify-end items-center gap-6 font-medium w-auto text-black top-[66px] right-1 bg-white p-4 border rounded-md border-slate-300 shadow-md">
+        <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#start">Inicio</a></li>
+        <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#design">Diseño</a></li>
+        <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#about">Nosotros</a></li>
+        <li><a class="hover:bg-slate-100 py-2 px-4 rounded-md trans" href="#strategy">Estrategias</a></li>
+    </ul>
 </nav>

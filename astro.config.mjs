@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://NicolasC-Utal.github.io',
+  site: 'https://nicolasc-utal.github.io',
   base: 'blog-nospillbowl',
   integrations: [tailwind()]
 });

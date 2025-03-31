@@ -4,7 +4,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://Nicolas-Cuadra.github.io',
+  site: 'https://nicolascuadram.github.io',
   base: 'blog-nospillbowl',
   integrations: [tailwind()]
 });
